@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Protótipo - Sistema de Sugestão de Grade Têxtil</title>
+    
+</head>
+<body>
+
+    <aside>
+        <h2>Grade Têxtil</h2>
+        <p>Projeto Extensão II - IFSC</p>
+        <ul class="nav-links">
+            <li class="active">📊 Consultas e Produtos</li>
+            <li>👕 Sugestão de Grade</li>
+            <li>🧶 Cálculo por Malha</li>
+        </ul>
+    </aside>
+
+    <main>
+        <header>
+            <div>
+                <h2>Protótipo de Telas do Sistema</h2>
+                <p class="user-info">Cliente: Jean Carlos Fantoni[cite: 11] | Unidade: Gaspar[cite: 11]</p>
+            </div>
+            <span class="badge badge-success">Versão 1.0[cite: 11]</span>
+        </header>
+
+        <!-- TELA 0: AUTENTICAÇÃO / LOGIN DO USUÁRIO (JEAN CARLOS FANTONI) -->
+    <div class="login-body">
+        <div class="login-card">
+            <h2>Grade Têxtil IFSC</h2>
+            <p>Controle de Produção - Acesso Restrito</p>
+            <form>
+                <div class="form-group">
+                    <label>Usuário Responsável</label>
+                    <input type="text" value="Jean Carlos Fantoni" readonly style="background-color: #f1f5f9; font-weight: 600;">
+                </div>
+                <div class="form-group">
+                    <label>Senha de Acesso</label>
+                    <input type="password" value="********" readonly style="background-color: #f1f5f9;">
+                </div>
+                <button type="button" class="btn" onclick="alert('Simulação de login realizada com sucesso para Jean Carlos Fantoni!')">Entrar no Sistema</button>
+            </form>
+            <p style="margin-top: 20px; font-size: 0.75rem; color: #94a3b8;">Projeto de Extensão II | IFSC Gaspar 2026</p>
+        </div>
+    </div>
+
+    <!-- 
+      NOTA: Para visualizar as telas internas abaixo no protótipo, 
+      você pode alternar a visualização CSS ou criar arquivos separados. 
+    -->
+
+    
+        <!-- TELA 1: CONSULTA DE PRODUTOS E REFERÊNCIAS (UC01) -->
+        <div class="card">
+            <h3>Tela 1: Consulta de Produtos e Referências (UC01)</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Código da Referência</label>
+                    <input type="text" value="REF-1042 (Camiseta Básica)">
+                </div>
+                <div class="form-group">
+                    <label>Coleção</label>
+                    <select>
+                        <option>Verão 2026/2027</option>
+                    </select>
+                </div>
+                <div class="form-group" style="justify-content: flex-end;">
+                    <button class="btn">Pesquisar</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código Ref.</th>
+                        <th>Descrição</th>
+                        <th>Cores Disponíveis</th>
+                        <th>Tamanhos</th>
+                        <th>Consumo / Peça</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>REF-1042</strong></td>
+                        <td>Camiseta Masculina Meia Malha</td>
+                        <td><span class="badge">Azul</span> <span class="badge">Preto</span> <span class="badge">Branco</span></td>
+                        <td>P, M, G, GG</td>
+                        <td>0,220 kg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TELA 2: GERAR SUGESTÃO DE GRADE (UC02) -->
+        <div class="card">
+            <h3>Tela 2: Geração de Sugestão de Grade de Produção (UC02)[cite: 5]</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Volume Total Desejado (Peças)</label>
+                    <input type="number" value="5000">
+                </div>
+                <div class="form-group">
+                    <label>Base Histórica Comparativa</label>
+                    <input type="text" value="Ano Anterior (2025)" readonly style="background-color: #f1f5f9;">
+                </div>
+                <div class="form-group" style="justify-content: flex-end;">
+                    <button class="btn btn-success">Gerar Sugestão</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cor</th>
+                        <th>Tam P (15%)</th>
+                        <th>Tam M (35%)</th>
+                        <th>Tam G (30%)</th>
+                        <th>Tam GG (20%)</th>
+                        <th>Total Cor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Preto (40%)</strong></td>
+                        <td>300 pcs</td>
+                        <td>700 pcs</td>
+                        <td>600 pcs</td>
+                        <td>400 pcs</td>
+                        <td><strong>2.000 pcs</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TELA 3: CÁLCULO DE ESTOQUE DE MALHA (UC03 / UC04) -->
+        <div class="card">
+            <h3>Tela 3: Cálculo de Produção e Sobra de Malha (UC03 / UC04)[cite: 5, 6]</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Malha em Estoque (kg)</label>
+                    <input type="number" value="450">
+                </div>
+                <div class="form-group">
+                    <label>Consumo por Peça (kg)</label>
+                    <input type="text" value="0,220 kg" readonly style="background-color: #f1f5f9;">
+                </div>
+                <div class="form-group" style="justify-content: flex-end;">
+                    <button class="btn">Calcular Viabilidade</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box success">
+                    <p>Peças Possíveis de Produzir</p>
+                    <h4>2.045 Peças</h4>
+                </div>
+                <div class="stat-box">
+                    <p>Malha Restante (Sobra)</p>
+                    <h4>1,00 kg</h4>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
